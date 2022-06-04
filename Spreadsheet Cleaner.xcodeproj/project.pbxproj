@@ -52,13 +52,37 @@
 		041A8C15284C2340001EBB26 /* Spreadsheet Cleaner */ = {
 			isa = PBXGroup;
 			children = (
-				041A8C16284C2340001EBB26 /* AppDelegate.swift */,
+				041A8C27284C24D7001EBB26 /* Application */,
+				041A8C26284C24C9001EBB26 /* Resources */,
+				041A8C25284C24BB001EBB26 /* Storyboards */,
 				041A8C18284C2340001EBB26 /* ViewController.swift */,
-				041A8C1A284C2340001EBB26 /* Assets.xcassets */,
-				041A8C1C284C2340001EBB26 /* Main.storyboard */,
-				041A8C1F284C2340001EBB26 /* Spreadsheet_Cleaner.entitlements */,
 			);
 			path = "Spreadsheet Cleaner";
+			sourceTree = "<group>";
+		};
+		041A8C25284C24BB001EBB26 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				041A8C1C284C2340001EBB26 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		041A8C26284C24C9001EBB26 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				041A8C1A284C2340001EBB26 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		041A8C27284C24D7001EBB26 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				041A8C16284C2340001EBB26 /* AppDelegate.swift */,
+				041A8C1F284C2340001EBB26 /* Spreadsheet_Cleaner.entitlements */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spreadsheet Cleaner/Spreadsheet_Cleaner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Spreadsheet Cleaner/Application/Spreadsheet_Cleaner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -295,7 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Spreadsheet Cleaner/Spreadsheet_Cleaner.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Spreadsheet Cleaner/Application/Spreadsheet_Cleaner.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
