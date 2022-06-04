@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		041A8C17284C2340001EBB26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C16284C2340001EBB26 /* AppDelegate.swift */; };
-		041A8C19284C2340001EBB26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C18284C2340001EBB26 /* ViewController.swift */; };
 		041A8C1B284C2340001EBB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C1A284C2340001EBB26 /* Assets.xcassets */; };
 		041A8C1E284C2340001EBB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C1C284C2340001EBB26 /* Main.storyboard */; };
+		041A8C29284C259A001EBB26 /* SpreadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041A8C13284C2340001EBB26 /* Spreadsheet Cleaner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spreadsheet Cleaner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		041A8C16284C2340001EBB26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		041A8C18284C2340001EBB26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		041A8C1A284C2340001EBB26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041A8C1D284C2340001EBB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		041A8C1F284C2340001EBB26 /* Spreadsheet_Cleaner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spreadsheet_Cleaner.entitlements; sourceTree = "<group>"; };
+		041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 				041A8C27284C24D7001EBB26 /* Application */,
 				041A8C26284C24C9001EBB26 /* Resources */,
 				041A8C25284C24BB001EBB26 /* Storyboards */,
-				041A8C18284C2340001EBB26 /* ViewController.swift */,
+				041A8C2A284C259E001EBB26 /* View Controllers */,
 			);
 			path = "Spreadsheet Cleaner";
 			sourceTree = "<group>";
@@ -83,6 +83,14 @@
 				041A8C1F284C2340001EBB26 /* Spreadsheet_Cleaner.entitlements */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		041A8C2A284C259E001EBB26 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041A8C19284C2340001EBB26 /* ViewController.swift in Sources */,
+				041A8C29284C259A001EBB26 /* SpreadSheetViewController.swift in Sources */,
 				041A8C17284C2340001EBB26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
