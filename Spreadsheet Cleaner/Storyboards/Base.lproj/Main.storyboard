@@ -742,10 +742,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="ovg-BL-3dL">
-                                                    <rect key="frame" x="198" y="92" width="91" height="16"/>
+                                                    <rect key="frame" x="162" y="85" width="163" height="31"/>
                                                     <buttonCell key="cell" type="square" title="Drag File Here" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Gtq-wo-fqW">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="browseFilesButtonPressed:" target="XfG-lQ-9wD" id="XMp-jm-C8e"/>
@@ -791,6 +791,7 @@
                     </view>
                     <connections>
                         <outlet property="dropAreaView" destination="dsi-di-744" id="tP1-2E-rmZ"/>
+                        <outlet property="dropFileButton" destination="ovg-BL-3dL" id="IvH-3m-5og"/>
                         <outlet property="sanitizedButton" destination="OlL-X3-EF2" id="rhd-4O-EFR"/>
                     </connections>
                 </viewController>

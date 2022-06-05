@@ -14,6 +14,7 @@ class SpreadSheetViewController: NSViewController {
     //MARK: - Outlets
     @IBOutlet weak var dropAreaView: DropView!
     @IBOutlet weak var sanitizedButton: NSButton!
+    @IBOutlet weak var dropFileButton: NSButton!
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class SpreadSheetViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        self.view.window?.title = "Spreadsheet Sanitizer"
+        self.view.window?.title = "Spreadsheet Cleaner"
     }
     
     
@@ -37,6 +38,13 @@ class SpreadSheetViewController: NSViewController {
         print("🚨 Process file")
     }
     
+    //MARK: - Private Methods
+    private func updateDropAreaUI() {
+        dropFileButton.title = ""
+        dropFileButton.image = NSImage(systemSymbolName: "checkmark.circle", accessibilityDescription: "Success")
+        dropFileButton.contentTintColor = NSColor.green
+    }
+    
 }
 
 //MARK: - DropViewDelegate
@@ -44,6 +52,7 @@ extension SpreadSheetViewController: DropViewDelegate{
     func fileDidDrop(withUrl fileUrl: String) {
         self.fileURL = fileUrl
         sanitizedButton.isEnabled = !fileURL.isEmpty
+        updateDropAreaUI()
         print("✅ \(fileUrl)")
     }
     
