@@ -8,14 +8,16 @@
 import Cocoa
 
 class SpreadSheetViewController: NSViewController {
+    //MARK: - Properties
+    private var fileURL = ""
 
     //MARK: - Outlets
-    @IBOutlet weak var dropAreaBox: NSBox!
+    @IBOutlet weak var dropAreaView: DropView!
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        dropAreaView.delegate = self
     }
     
     
@@ -25,6 +27,15 @@ class SpreadSheetViewController: NSViewController {
     }
     
     @IBAction func startCleanPressed(_ sender: NSButton) {
+        print("🚨 Process file")
+    }
+    
+}
+
+extension SpreadSheetViewController: DropViewDelegate{
+    func fileDidDrop(withUrl fileUrl: String) {
+        self.fileURL = fileUrl
+        print("✅ \(fileUrl)")
     }
     
 }

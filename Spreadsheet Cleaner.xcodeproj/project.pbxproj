@@ -14,6 +14,7 @@
 		041A8C2C284C2639001EBB26 /* python_scripts.py in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C2B284C2639001EBB26 /* python_scripts.py */; };
 		041A8C2F284C266C001EBB26 /* PythonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C2E284C266C001EBB26 /* PythonController.swift */; };
 		041A8C33284C26A8001EBB26 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 041A8C32284C26A8001EBB26 /* PythonKit */; };
+		041A8C35284D12A6001EBB26 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C34284D12A6001EBB26 /* DropView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetViewController.swift; sourceTree = "<group>"; };
 		041A8C2B284C2639001EBB26 /* python_scripts.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = python_scripts.py; sourceTree = "<group>"; };
 		041A8C2E284C266C001EBB26 /* PythonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonController.swift; sourceTree = "<group>"; };
+		041A8C34284D12A6001EBB26 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */,
+				041A8C34284D12A6001EBB26 /* DropView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041A8C2F284C266C001EBB26 /* PythonController.swift in Sources */,
+				041A8C35284D12A6001EBB26 /* DropView.swift in Sources */,
 				041A8C29284C259A001EBB26 /* SpreadSheetViewController.swift in Sources */,
 				041A8C17284C2340001EBB26 /* AppDelegate.swift in Sources */,
 			);
