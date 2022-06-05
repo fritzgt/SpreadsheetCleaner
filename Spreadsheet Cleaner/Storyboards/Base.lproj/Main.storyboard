@@ -706,48 +706,87 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="SpreadSheetViewController" customModule="Spreadsheet_Cleaner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="486" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <box title="Drop Area" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Z88-Yv-2BS">
-                                <rect key="frame" x="277" y="-4" width="206" height="276"/>
-                                <view key="contentView" id="dsi-di-744" customClass="DropView" customModule="Spreadsheet_Cleaner" customModuleProvider="target">
-                                    <rect key="frame" x="3" y="3" width="200" height="270"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ovg-BL-3dL">
-                                            <rect key="frame" x="45" y="107" width="111" height="56"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="square" title="Drag File Here" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Gtq-wo-fqW">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="browseFilesButtonPressed:" target="XfG-lQ-9wD" id="XMp-jm-C8e"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                </view>
+                            <stackView distribution="equalCentering" orientation="vertical" alignment="centerX" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GJf-fQ-MMa">
+                                <rect key="frame" x="0.0" y="0.0" width="486" height="415"/>
+                                <subviews>
+                                    <box boxType="secondary" borderType="none" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="awI-fN-apD">
+                                        <rect key="frame" x="-3" y="196" width="492" height="221"/>
+                                        <view key="contentView" id="kel-lx-HnT">
+                                            <rect key="frame" x="0.0" y="0.0" width="492" height="221"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OlL-X3-EF2">
+                                                    <rect key="frame" x="201" y="94" width="90" height="32"/>
+                                                    <buttonCell key="cell" type="push" title="Sanitized" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Y4-8Y-FcR">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="startCleanPressed:" target="XfG-lQ-9wD" id="Naz-CI-yIZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OlL-X3-EF2" firstAttribute="centerY" secondItem="kel-lx-HnT" secondAttribute="centerY" id="1wx-Y9-JzN"/>
+                                                <constraint firstItem="OlL-X3-EF2" firstAttribute="centerX" secondItem="kel-lx-HnT" secondAttribute="centerX" id="JJ1-XZ-z2c"/>
+                                            </constraints>
+                                        </view>
+                                    </box>
+                                    <box title="Drop Area" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Z88-Yv-2BS">
+                                        <rect key="frame" x="-3" y="-4" width="492" height="206"/>
+                                        <view key="contentView" id="dsi-di-744" customClass="DropView" customModule="Spreadsheet_Cleaner" customModuleProvider="target">
+                                            <rect key="frame" x="3" y="3" width="486" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="ovg-BL-3dL">
+                                                    <rect key="frame" x="198" y="92" width="91" height="16"/>
+                                                    <buttonCell key="cell" type="square" title="Drag File Here" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Gtq-wo-fqW">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="browseFilesButtonPressed:" target="XfG-lQ-9wD" id="XMp-jm-C8e"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ovg-BL-3dL" firstAttribute="centerX" secondItem="dsi-di-744" secondAttribute="centerX" id="akl-lO-4TS"/>
+                                                <constraint firstItem="ovg-BL-3dL" firstAttribute="centerY" secondItem="dsi-di-744" secondAttribute="centerY" id="jxG-N9-WbQ"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="ab1-T3-5So"/>
+                                        </constraints>
+                                    </box>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="wLK-OW-UQx"/>
+                                    <constraint firstItem="Z88-Yv-2BS" firstAttribute="leading" secondItem="GJf-fQ-MMa" secondAttribute="leading" id="6AV-6l-AQr"/>
+                                    <constraint firstItem="Z88-Yv-2BS" firstAttribute="top" secondItem="awI-fN-apD" secondAttribute="bottom" id="9Jv-jA-Jrq"/>
+                                    <constraint firstItem="awI-fN-apD" firstAttribute="top" secondItem="GJf-fQ-MMa" secondAttribute="top" id="BPb-km-FRg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z88-Yv-2BS" secondAttribute="bottom" id="ImC-47-a8q"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z88-Yv-2BS" secondAttribute="trailing" id="PrV-0e-4Qb"/>
+                                    <constraint firstAttribute="trailing" secondItem="awI-fN-apD" secondAttribute="trailing" id="V33-fD-eO7"/>
+                                    <constraint firstItem="Z88-Yv-2BS" firstAttribute="top" secondItem="awI-fN-apD" secondAttribute="bottom" id="XeL-74-pNH"/>
+                                    <constraint firstItem="awI-fN-apD" firstAttribute="leading" secondItem="GJf-fQ-MMa" secondAttribute="leading" id="cyv-Fh-RJM"/>
                                 </constraints>
-                            </box>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlL-X3-EF2">
-                                <rect key="frame" x="75" y="118" width="132" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Sanitized" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Y4-8Y-FcR">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="startCleanPressed:" target="XfG-lQ-9wD" id="Naz-CI-yIZ"/>
-                                </connections>
-                            </button>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Z88-Yv-2BS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Vdj-zz-s2g"/>
-                            <constraint firstAttribute="bottom" secondItem="Z88-Yv-2BS" secondAttribute="bottom" id="Vfs-Ok-anR"/>
-                            <constraint firstAttribute="trailing" secondItem="Z88-Yv-2BS" secondAttribute="trailing" id="mIi-X7-u9B"/>
+                            <constraint firstAttribute="trailing" secondItem="GJf-fQ-MMa" secondAttribute="trailing" id="5BD-Ik-XZX"/>
+                            <constraint firstAttribute="bottom" secondItem="GJf-fQ-MMa" secondAttribute="bottom" id="6ox-pE-FoW"/>
+                            <constraint firstItem="GJf-fQ-MMa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="fEx-g2-9YU"/>
+                            <constraint firstItem="GJf-fQ-MMa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="jaw-1U-7Ca"/>
                         </constraints>
                     </view>
                     <connections>
@@ -757,7 +796,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="818.5"/>
         </scene>
     </scenes>
 </document>

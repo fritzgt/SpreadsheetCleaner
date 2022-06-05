@@ -15,12 +15,16 @@ class SpreadSheetViewController: NSViewController {
     @IBOutlet weak var dropAreaView: DropView!
     @IBOutlet weak var sanitizedButton: NSButton!
     
-    
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         dropAreaView.delegate = self
         sanitizedButton.isEnabled = !fileURL.isEmpty
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = "Spreadsheet Sanitizer"
     }
     
     
@@ -35,6 +39,7 @@ class SpreadSheetViewController: NSViewController {
     
 }
 
+//MARK: - DropViewDelegate
 extension SpreadSheetViewController: DropViewDelegate{
     func fileDidDrop(withUrl fileUrl: String) {
         self.fileURL = fileUrl
