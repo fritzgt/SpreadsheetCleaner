@@ -732,6 +732,17 @@
                                     <constraint firstAttribute="width" constant="200" id="wLK-OW-UQx"/>
                                 </constraints>
                             </box>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlL-X3-EF2">
+                                <rect key="frame" x="65" y="118" width="132" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Sanitized" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Y4-8Y-FcR">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="startCleanPressed:" target="XfG-lQ-9wD" id="Naz-CI-yIZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Z88-Yv-2BS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Vdj-zz-s2g"/>

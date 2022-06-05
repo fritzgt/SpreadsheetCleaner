@@ -9,16 +9,22 @@ import Cocoa
 
 class SpreadSheetViewController: NSViewController {
 
+    //MARK: - Outlets
     @IBOutlet weak var dropAreaBox: NSBox!
     
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-//        dropAreaBox.
     }
     
+    
+    //MARK: - Actions
     @IBAction func browseFilesButtonPressed(_ sender: NSButton) {
         print("✅ Tap")
+    }
+    
+    @IBAction func startCleanPressed(_ sender: NSButton) {
     }
     
 }
