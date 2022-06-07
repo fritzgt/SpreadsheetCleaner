@@ -49,8 +49,11 @@ class SpreadSheetViewController: NSViewController {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
+        panel.allowedFileTypes = ["pdf"]
+        
         if panel.runModal() == .OK {
             self.fileURL = panel.url?.absoluteString ?? ""
+            sanitizedButton.isEnabled = !fileURL.isEmpty
             print("✅ \(self.fileURL)")
         }
     }
