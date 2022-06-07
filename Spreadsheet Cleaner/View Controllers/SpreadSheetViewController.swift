@@ -31,7 +31,7 @@ class SpreadSheetViewController: NSViewController {
     
     //MARK: - Actions
     @IBAction func browseFilesButtonPressed(_ sender: NSButton) {
-        print("✅ Tap")
+        showFinder()
     }
     
     @IBAction func startCleanPressed(_ sender: NSButton) {
@@ -45,6 +45,16 @@ class SpreadSheetViewController: NSViewController {
         dropFileButton.contentTintColor = NSColor.green
     }
     
+    private func showFinder() {
+        let panel = NSOpenPanel()
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+        if panel.runModal() == .OK {
+            self.fileURL = panel.url?.absoluteString ?? ""
+            print("✅ \(self.fileURL)")
+        }
+    }
+        
 }
 
 //MARK: - DropViewDelegate
@@ -53,7 +63,7 @@ extension SpreadSheetViewController: DropViewDelegate{
         self.fileURL = fileUrl
         sanitizedButton.isEnabled = !fileURL.isEmpty
         updateDropAreaUI()
-        print("✅ \(fileUrl)")
+        print("✅ \(self.fileURL)")
     }
     
 }
