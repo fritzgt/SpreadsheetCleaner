@@ -49,7 +49,7 @@ class SpreadSheetViewController: NSViewController {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
-        panel.allowedFileTypes = ["pdf"]
+        panel.allowedFileTypes = ["pdf"] //TODO: 🚨 UPDATE THE ALLOW FILE TYPES
         
         if panel.runModal() == .OK {
             self.fileURL = panel.url?.absoluteString ?? ""
