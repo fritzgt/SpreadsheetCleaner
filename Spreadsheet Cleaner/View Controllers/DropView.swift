@@ -14,7 +14,7 @@ protocol DropViewDelegate {
 class DropView: NSView {
 
     private var filePath: String?
-    private let expectedExt = ["pdf"] //TODO: 🚨Add the appropiate file extension
+    private let expectedExt = ["xlsx"] //TODO: 🚨Add the appropiate file extension
     
     var delegate: DropViewDelegate?
 
