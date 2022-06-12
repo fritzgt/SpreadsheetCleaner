@@ -35,7 +35,7 @@ class SpreadSheetViewController: NSViewController {
     }
     
     @IBAction func startCleanPressed(_ sender: NSButton) {
-        print("🚨 Process file")
+        PythonController().cleanDoc(url: "✅ It's working!")
     }
     
     //MARK: - Private Methods

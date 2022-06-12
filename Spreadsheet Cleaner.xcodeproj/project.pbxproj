@@ -11,10 +11,10 @@
 		041A8C1B284C2340001EBB26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C1A284C2340001EBB26 /* Assets.xcassets */; };
 		041A8C1E284C2340001EBB26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C1C284C2340001EBB26 /* Main.storyboard */; };
 		041A8C29284C259A001EBB26 /* SpreadSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */; };
-		041A8C2C284C2639001EBB26 /* python_scripts.py in Resources */ = {isa = PBXBuildFile; fileRef = 041A8C2B284C2639001EBB26 /* python_scripts.py */; };
 		041A8C2F284C266C001EBB26 /* PythonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C2E284C266C001EBB26 /* PythonController.swift */; };
-		041A8C33284C26A8001EBB26 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 041A8C32284C26A8001EBB26 /* PythonKit */; };
 		041A8C35284D12A6001EBB26 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A8C34284D12A6001EBB26 /* DropView.swift */; };
+		04403953285533FF00A0C4A4 /* MPL.py in Resources */ = {isa = PBXBuildFile; fileRef = 04403952285533FF00A0C4A4 /* MPL.py */; };
+		04DB35EF28553EE900CC96DF /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04DB35EE28553EE900CC96DF /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,9 +24,9 @@
 		041A8C1D284C2340001EBB26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		041A8C1F284C2340001EBB26 /* Spreadsheet_Cleaner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spreadsheet_Cleaner.entitlements; sourceTree = "<group>"; };
 		041A8C28284C259A001EBB26 /* SpreadSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpreadSheetViewController.swift; sourceTree = "<group>"; };
-		041A8C2B284C2639001EBB26 /* python_scripts.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = python_scripts.py; sourceTree = "<group>"; };
 		041A8C2E284C266C001EBB26 /* PythonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonController.swift; sourceTree = "<group>"; };
 		041A8C34284D12A6001EBB26 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		04403952285533FF00A0C4A4 /* MPL.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = MPL.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041A8C33284C26A8001EBB26 /* PythonKit in Frameworks */,
+				04DB35EF28553EE900CC96DF /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		041A8C2D284C2640001EBB26 /* Python Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				041A8C2B284C2639001EBB26 /* python_scripts.py */,
+				04403952285533FF00A0C4A4 /* MPL.py */,
 			);
 			path = "Python Scripts";
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			);
 			name = "Spreadsheet Cleaner";
 			packageProductDependencies = (
-				041A8C32284C26A8001EBB26 /* PythonKit */,
+				04DB35EE28553EE900CC96DF /* PythonKit */,
 			);
 			productName = "Spreadsheet Cleaner";
 			productReference = 041A8C13284C2340001EBB26 /* Spreadsheet Cleaner.app */;
@@ -168,7 +168,7 @@
 			);
 			mainGroup = 041A8C0A284C2340001EBB26;
 			packageReferences = (
-				041A8C31284C26A8001EBB26 /* XCRemoteSwiftPackageReference "PythonKit" */,
+				04DB35ED28553EE900CC96DF /* XCRemoteSwiftPackageReference "PythonKit" */,
 			);
 			productRefGroup = 041A8C14284C2340001EBB26 /* Products */;
 			projectDirPath = "";
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041A8C1B284C2340001EBB26 /* Assets.xcassets in Resources */,
-				041A8C2C284C2639001EBB26 /* python_scripts.py in Resources */,
+				04403953285533FF00A0C4A4 /* MPL.py in Resources */,
 				041A8C1E284C2340001EBB26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,7 +409,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		041A8C31284C26A8001EBB26 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+		04DB35ED28553EE900CC96DF /* XCRemoteSwiftPackageReference "PythonKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pvieito/PythonKit";
 			requirement = {
@@ -420,9 +420,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		041A8C32284C26A8001EBB26 /* PythonKit */ = {
+		04DB35EE28553EE900CC96DF /* PythonKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 041A8C31284C26A8001EBB26 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			package = 04DB35ED28553EE900CC96DF /* XCRemoteSwiftPackageReference "PythonKit" */;
 			productName = PythonKit;
 		};
 /* End XCSwiftPackageProductDependency section */

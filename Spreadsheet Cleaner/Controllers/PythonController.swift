@@ -8,17 +8,25 @@
 import Foundation
 import PythonKit
 
-struct PythonScript {
+struct PythonController {
     
-    // MARK: - Properties
-    private let scriptPath = Python.import("sys").path.pythonObject.append("/Users/fgt/Developer/Spreadsheet Cleaner/Spreadsheet Cleaner/")
-    private let scriptsFile = Python.import("python_scripts")
-
+    private func setupPython() -> PythonObject {
+        let sys = Python.import("sys")
+        let filePath = "/Users/mac/Developer/iOS Production/Spreadsheet Cleaner/Spreadsheet Cleaner/Python Scripts/"
+        sys.path.pythonObject.append(filePath)
+        
+        print("Python \(sys.version_info.major).\(sys.version_info.minor)")
+        print("Python Version: \(sys.version)")
+        print("Python Encoding: \(sys.getdefaultencoding().upper())")
+        
+        return Python.import("MPL")
+    }
     
     // MARK: - Methods
     func cleanDoc(url: String) {
-        let response = scriptsFile.clean_spreadsheet(url)
-        print("🟢 \(response)")
+        let mpl = setupPython()
+        let myMessage = mpl.test_invoke_method(url)
+        print(myMessage)
     }
 }
 
