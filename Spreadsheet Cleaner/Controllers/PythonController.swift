@@ -25,7 +25,8 @@ struct PythonController {
     // MARK: - Methods
     func cleanDoc(url: String) {
         let mpl = setupPython()
-        let myMessage = mpl.test_invoke_method(url)
+        let mplClass = mpl.MPL()
+        let myMessage = mplClass.test_invoke_method(url)
         print(myMessage)
     }
 }
